@@ -1,23 +1,43 @@
-<?php
-session_start();
-include 'db.php';
-?>
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collect Hub</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to an external stylesheet if needed -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cafe Dahlia</title>
+
+  <!-- Favicon and theme CSS -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
+  <link rel="manifest" href="assets/img/favicons/manifest.json">
+  <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+  <meta name="theme-color" content="#ffffff">
+  <link href="assets/css/theme.css" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <h1>Welcome to Collect Hub</h1>
-    </header>
-    <main>
-	<section class="py-5 overflow-hidden bg-primary" id="home">
+  <main class="main" id="top">
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="assets/img/gallery/logo.svg" alt="logo" class="img-fluid" style="height: 40px;">
+          <span class="text-1000 fs-3 fw-bold ms-2 text-gradient">Cafe Dahlia</span>
+        </a>
+        <div class="d-flex align-items-center">
+          <img src="assets/img/gallery/uitmlogo.png" alt="UiTM Logo" style="height: 40px; margin-right: 10px;">
+          <div class="fw-bold">UiTM Puncak Perdana, Cawangan Selangor</div>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section class="py-5 overflow-hidden bg-primary" id="home">
       <div class="container">
         <div class="row flex-center">
           <div class="col-md-5 col-lg-6 order-0 order-md-1 mt-8 mt-md-0">
@@ -37,9 +57,151 @@ include 'db.php';
         </div>
       </div>
     </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Collect Hub. All rights reserved.</p>
-    </footer>
+
+    <!-- Hot Selling Section -->
+    <section class="py-0">
+      <div class="container">
+        <div class="col-lg-7 mx-auto text-center mt-7 mb-5">
+          <h5 class="fw-bold fs-3 fs-lg-5 lh-sm">Hot Selling!🔥</h5>
+        </div>
+        <div class="row h-100 gx-2 mt-7">
+          <div class="col-sm-6 col-lg-3 mb-3 mb-md-0 h-100 pb-4">
+            <div class="card card-span h-100">
+              <div class="position-relative">
+                <img class="img-fluid rounded-3 w-100" src="assets/img/gallery/ayamgunting.jpg" alt="Ayam Gunting">
+                <div class="card-body px-0">
+                  <h5 class="fw-bold text-1000 text-truncate">Ayam Gunting</h5>
+                  <p class="text-1000">RM9.00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 mb-3 mb-md-0 h-100 pb-4">
+            <div class="card card-span h-100">
+              <div class="position-relative">
+                <img class="img-fluid rounded-3 w-100" src="assets/img/gallery/pancake.jpeg" alt="Baby Pancake">
+                <div class="card-body px-0">
+                  <h5 class="fw-bold text-1000 text-truncate">Baby Pancake</h5>
+                  <p class="text-1000">RM6.00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 mb-3 mb-md-0 h-100 pb-4">
+            <div class="card card-span h-100">
+              <div class="position-relative">
+                <img class="img-fluid rounded-3 w-100" src="assets/img/gallery/icecream.jpg" alt="Soft Ice Cream">
+                <div class="card-body px-0">
+                  <h5 class="fw-bold text-1000 text-truncate">Soft Ice Cream</h5>
+                  <p class="text-1000">RM5.00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 mb-3 mb-md-0 h-100 pb-4">
+            <div class="card card-span h-100">
+              <div class="position-relative">
+                <img class="img-fluid rounded-3 w-100" src="assets/img/gallery/roti.png" alt="Sandwich">
+                <div class="card-body px-0">
+                  <h5 class="fw-bold text-1000 text-truncate">Sandwich</h5>
+                  <p class="text-1000">RM7.00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Menu Section -->
+    <section class="py-4 overflow-hidden bg-primary">
+      <div class="container">
+        <div class="row flex-center">
+          <div class="col-lg-6 text-center mx-auto mb-3 mb-md-5 mt-4">
+            <h5 class="fw-bold fs-3 fs-lg-5 lh-sm mb-3 text-light">Our Menu</h5>
+          </div>
+          <div class="row gx-3 h-100" id="menuItems">
+            <div class="col-md-4 mb-3">
+              <div class="card card-span h-100 text-white">
+                <img class="img-fluid h-100 w-100" src="assets/img/gallery/spagettistall.jpg" alt="Pasta">
+                <div class="card-body">
+                  <h4 class="fw-bold text-1000 fs-2">Pasta</h4>
+                  <p class="text-1000 fs-2">RM10.00</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="card card-span h-100 text-white">
+                <img class="img-fluid h-100 w-100" src="assets/img/gallery/nasiberlauk.jpg" alt="Nasi Berlauk">
+                <div class="card-body">
+                  <h4 class="fw-bold text-1000 fs-2">Nasi Berlauk</h4>
+                  <p class="text-1000 fs-2">Range from RM5.00 - RM7.00</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="card card-span h-100 text-white">
+                <img class="img-fluid h-100 w-100" src="assets/img/gallery/airbalang.jpg" alt="Air Balang Viral">
+                <div class="card-body">
+                  <h4 class="fw-bold text-1000 fs-2">Air Balang Viral</h4>
+                  <p class="text-1000 fs-2">RM3.00</p>
+                </div>
+              </div>
+            </div>
+            <!-- Extra items initially hidden -->
+            <div class="col-md-4 mb-3 extra-item d-none">
+              <div class="card card-span h-100 text-white">
+                <img class="img-fluid h-100 w-100" src="assets/img/gallery/western.jpg" alt="Western">
+                <div class="card-body">
+                  <h4 class="fw-bold text-1000 fs-2">Western</h4>
+                  <p class="text-1000 fs-2">RM10.00</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3 extra-item d-none">
+              <div class="card card-span h-100 text-white">
+                <img class="img-fluid h-100 w-100" src="assets/img/gallery/takoyaki.jpg" alt="Takoyaki">
+                <div class="card-body">
+                  <h4 class="fw-bold text-1000 fs-2">Takoyaki</h4>
+                  <p class="text-1000 fs-2">RM7.00</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3 extra-item d-none">
+              <div class="card card-span h-100 text-white">
+                <img class="img-fluid h-100 w-100" src="assets/img/gallery/noodles.png" alt="Noodles">
+                <div class="card-body">
+                  <h4 class="fw-bold text-1000 fs-2">Noodles</h4>
+                  <p class="text-1000 fs-2">RM5.00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center">
+            <button class="btn btn-lg btn-danger" id="showMoreButton" onclick="toggleMenuItems()">Show More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- JavaScript dependencies -->
+  <script src="vendors/@popperjs/popper.min.js"></script>
+  <script src="vendors/bootstrap/bootstrap.min.js"></script>
+  <script src="vendors/is/is.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+  <script src="vendors/fontawesome/all.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+
+  <!-- Custom JavaScript for toggle functionality -->
+  <script>
+    function toggleMenuItems() {
+      const extraItems = document.querySelectorAll('.extra-item');
+      extraItems.forEach(item => item.classList.toggle('d-none'));
+
+      const showMoreButton = document.getElementById('showMoreButton');
+      showMoreButton.textContent = showMoreButton.textContent === 'Show More' ? 'Show Less' : 'Show More';
+    }
+  </script>
 </body>
 </html>
